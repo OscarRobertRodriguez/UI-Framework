@@ -1,0 +1,152 @@
+.footer {
+  background: $color-dark-gunmetal;
+}
+
+
+.footer__container {
+ display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 7rem 8rem 1fr;
+  justify-items: center;
+  height: 100%;
+  max-width: 80rem;
+
+  @include respond(tab-port) {
+    grid-template-rows: 15rem 10rem 1fr;
+  }
+}
+
+
+//footer nav
+
+.footer__nav {
+ grid-column: 1 / -1;
+  grid-row: 1/2;
+  display: flex;
+  max-width: 60rem;
+  justify-content: space-around;
+  flex-flow: wrap;
+  align-self: end;
+  padding: 0 2rem;
+
+  @include respond(tab-port) {
+    align-self: center;
+  }
+}
+
+
+.footer__nav-item {
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem .5rem;
+  color: $color-blueberry-soda;
+  transition: all .2s ease;
+
+  @include respond(tab-port) {
+    font-size: 1.8rem;
+  }
+
+  &:hover,
+  &:active {
+    filter: brightness(1.6);
+  }
+}
+
+
+// icons
+.footer__icons {
+ grid-column: 1 /-1;
+  grid-row: 2/ 3;
+  display:flex;
+  justify-content: space-around;
+  width: 25rem;
+  height: 100%;
+  align-items: center;
+
+
+}
+
+
+.footer__icon {
+
+
+  & a {
+     fill: $color-blueberry-soda;
+    display: block;
+    width: 2.5rem;
+    transition: all .2s ease;
+
+    &:hover {
+      filter: brightness(1.5);
+    }
+  }
+
+}
+
+
+
+// bottom section of footer
+.footer__bottom {
+  border-top: 1px solid $color-metalise;
+  grid-column: 1/ -1;
+  grid-row: 3 / 4;
+  display: grid;
+  justify-content: center;
+   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  @include respond(tab-port) {
+    grid-template-columns: .5fr 1fr;
+    padding: 2rem;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: .5fr 1fr;
+    padding: 0rem;
+  }
+  & p {
+     color: $color-blueberry-soda;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    align-self: end;
+
+    @include respond(tab-port) {
+      align-self: center;
+      text-align: center;
+      padding:  0 2rem;
+    }
+  }
+}
+
+
+//// avatar footer
+.footer__avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 12rem;
+  color: $color-blueberry-soda;
+  text-align: center;
+
+  @include respond(tab-port) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+}
+
+.footer__avatar-img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 9999%;
+  @include respond(tab-port) {
+    padding-right: 1rem;
+  }
+}
+
+.footer__avatar-name {
+  font-size: 2rem;
+  text-transform: capitalize;
+}

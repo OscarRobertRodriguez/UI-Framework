@@ -1,0 +1,9 @@
+
+
+.border--bottom {
+  border-bottom: 2px solid #f2f5fa;
+
+  @include respond(phone) {
+    margin-bottom: 2rem;
+  }
+}
